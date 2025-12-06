@@ -23,10 +23,10 @@ So, Give your Cap of coffe and let’s start on.
 
 |  | Subjects |
 | --- | --- |
-| Module 1 | [What is a SIEM](Elastic%20stack%20SIEM%20complete%20Guide%202bdd315fc81280059707d7bb9c22d3c8.md) |
-| Module 2 | [Banchemark](Elastic%20stack%20SIEM%20complete%20Guide%202bdd315fc81280059707d7bb9c22d3c8.md) |
-| Module 3 | [What is Elastic Stack](Elastic%20stack%20SIEM%20complete%20Guide%202bdd315fc81280059707d7bb9c22d3c8.md) |
-| Module 4 | [Hands on Labs](Elastic%20stack%20SIEM%20complete%20Guide%202bdd315fc81280059707d7bb9c22d3c8.md) |
+| Module 1 | [What is a SIEM](README.md.md) |
+| Module 2 | [Banchemark](README.md.md) |
+| Module 3 | [What is Elastic Stack](README.md.md) |
+| Module 4 | [Hands on Labs](README.md.md) |
 
 ---
 
