@@ -1,5 +1,5 @@
 
-# Elastic-stack-SIEM-complete-Guide
+# README
 ![BlocksBrickGIF (2)](https://github.com/user-attachments/assets/28c9169d-bf35-4102-9103-27d554f88151)
 
 # Introdction and support mention
@@ -18,15 +18,24 @@ if you want to get more deep undrstanding of the product you can merge between t
 So, Give your Cap of coffe and let’s start on.
 
 ---
+# Table of content
+
+|  | Subjects |
+| --- | --- |
+| Module 1 | [What is a SIEM](https://www.notion.so/README-2bdd315fc81280059707d7bb9c22d3c8?pvs=21) |
+| Module 2 | [Banchemark](https://www.notion.so/README-2bdd315fc81280059707d7bb9c22d3c8?pvs=21) |
+| Module 3 | [What is Elastic Stack](https://www.notion.so/README-2bdd315fc81280059707d7bb9c22d3c8?pvs=21) |
+| Module 4 | [Hands on Labs](https://www.notion.so/README-2bdd315fc81280059707d7bb9c22d3c8?pvs=21) |
+
 
 # Table of content
 
 |  | Subjects |
 | --- | --- |
-| Module 1 | [What is a SIEM](README.md.md) |
-| Module 2 | [Banchemark](README.md.md) |
-| Module 3 | [What is Elastic Stack](README.md.md) |
-| Module 4 | [Hands on Labs](README.md.md) |
+| Module 1 | [What is a SIEM](README.md) |
+| Module 2 | [Banchemark](README.md) |
+| Module 3 | [What is Elastic Stack](README.md) |
+| Module 4 | [Hands on Labs](README.md) |
 
 ---
 
