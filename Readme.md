@@ -36,7 +36,7 @@ To get the most out of this guide, I recommend following the modules in order:
 > * [**Module 2: Why ELK? 🚀**](#module-2--why-elk--)
 > * [**Module 3: What is Elastic Stack**](#module-3--what-is-elastic-stack)
 >     * [Agents & Fleet](#4-modern-data-ingestion-elastic-agent--fleet-)
-> * [**Module 4: Hands-On Labs**](#module-4--hands-on-lab)
+> * [**Module 4: 💫🔆Hands-On Labs 🔆💫**](#module-4--hands-on-lab)
 > 
 
 <details>
@@ -89,7 +89,7 @@ To get the most out of this guide, I recommend following the modules in order:
     - [**A. Systems Supporting Elastic Agents (The Direct Method) 💻**](#a-systems-supporting-elastic-agents-the-direct-method-)
     - [**B. Systems with Pre-built Integrations (The Syslog/IP Trick) 🌐**](#b-systems-with-pre-built-integrations-the-syslogip-trick-)
     - [**C. Legacy \& Closed Solutions (The Logstash Power-User Method) 🛠️**](#c-legacy--closed-solutions-the-logstash-power-user-method-️)
-- [Module 4 : Hands on lab](#module-4--hands-on-lab)
+- [Module 4 : 💫🔆Hands on lab🔆💫](#module-4--hands-on-lab)
 
 </details>
 
@@ -99,7 +99,7 @@ To get the most out of this guide, I recommend following the modules in order:
 
 but first befor going on the thearical detialed thachnical explaniation of the  SIEM let’s see dimo of what we are going to build 
 
-![image.png](Readme/image.png)
+![image.png](docs/Images/image.png)
 
 ---
 
@@ -114,7 +114,7 @@ SIEM did not appear overnight; it evolved from the convergence of two distinct s
 - **SIM (Security Information Management):** Focuses on long-term storage, log collection, and compliance reporting. Think of it as the **"Library"** 📚 of your infrastructure.
 - **SEM (Security Event Management):** Focuses on real-time monitoring, incident correlation, and immediate response. Think of it as the **"Alarm System." 🚨.**
 
-![image.png](Readme/image%201.png)
+![image.png](docs/Images/image%201.png)
 
 In **2005**, Gartner analysts **Mark Nicolett** and **Amrit Williams** coined the term "SIEM." By merging these two concepts, they created the superhero of cybersecurity: a unified platform that collects, analyzes, and responds to threats across your entire network. It's like having a 24/7 digital watchdog 🐕 that barks at the slightest anomaly!
 
@@ -139,7 +139,7 @@ The true power of a SIEM lies in this simple equation:
 
 By centralizing this "huge data" into a single platform, the SIEM allows security teams to detect, investigate, and respond to incidents faster than ever before.
 
-![image.png](Readme/image%202.png)
+![image.png](docs/Images/image%202.png)
 
 ---
 
@@ -187,7 +187,7 @@ An event is a specific, discrete action that occurred on a system. While every e
 
 ## **4. SIEM Workflow: The Journey of a Log** 🔄
 
-![poste_1.gif](Readme/poste_1.gif)
+![poste_1.gif](docs/Images/poste_1.gif)
 
 To understand how a SIEM transforms millions of raw data points into a single critical alert, we can break down its operation into **8 key stages**, based on the standard SOC (Security Operations Center) architecture:
 
@@ -242,7 +242,7 @@ Finally, the workflow is a loop. Analysts use "Lessons Learned" from past incide
 > *As shown in the architecture diagram above, a SIEM acts as a sophisticated funnel, taking raw, chaotic data from the bottom and refining it into clear, prioritized security actions at the top.*
 > 
 
-![As shown in the architecture diagram above, a SIEM acts as a sophisticated funnel, taking raw, chaotic data from the bottom and refining it into clear, prioritized security actions at the top.](Readme/image%203.png)
+![As shown in the architecture diagram above, a SIEM acts as a sophisticated funnel, taking raw, chaotic data from the bottom and refining it into clear, prioritized security actions at the top.](docs/Images/image%203.png)
 
 As shown in the architecture diagram above, a SIEM acts as a sophisticated funnel, taking raw, chaotic data from the bottom and refining it into clear, prioritized security actions at the top.
 
@@ -276,7 +276,7 @@ This is the top layer where the Security Operations Center (SOC) analysts intera
 
 # Module 2 : Why ELK ? 🚀
 
-![image.png](Readme/image%204.png)
+![image.png](docs/Images/image%204.png)
 
 This module explores the competitive landscape of SIEM solutions and explains why the Elastic Stack (ELK) is a game-changer for modern Security Operations.
 
@@ -340,7 +340,7 @@ In **2012**, Shay co-founded **Elastic** alongside Steven Schuurman, Uri Boness,
 
 ### **2. The Core Components (The "Engine")** ⚙️
 
-![elastic_composant_produit.png](Readme/elastic_composant_produit.png)
+![elastic_composant_produit.png](docs/Images/elastic_composant_produit.png)
 
 The Elastic Stack is composed of four main pillars that work in a seamless pipeline:
 
@@ -352,7 +352,7 @@ The Elastic Stack is composed of four main pillars that work in a seamless pipel
 | **Beats / Agent** 📦 | **Data Shippers** | Lightweight "messengers" installed on your servers or firewalls to ship logs and metrics directly to the stack. |  |
 |  |  |  |  |
 
-![logstash pipline (the output in our case will be elastisearch )](Readme/image%205.png)
+![logstash pipline (the output in our case will be elastisearch )](docs/Images/image%205.png)
 
 logstash pipline (the output in our case will be elastisearch )
 
@@ -375,13 +375,13 @@ Managing hundreds of individual agents manually is impossible in a large infrast
 - **Remote Policy Updates:** When you want to collect a new type of log (like adding FortiGate logs), you simply update the **Agent Policy** in the Fleet UI. Fleet Server automatically pushes these changes to all enrolled agents instantly.
 - **Massive Scalability:** A single Fleet Server can coordinate thousands of agents, making it the preferred choice for enterprise-level SIEM deployments.
 
-![image.png](Readme/image%206.png)
+![image.png](docs/Images/image%206.png)
 
 ### **5. Data Ingestion Strategies: How We Handle Different Sources** 🧬
 
 Not all systems in an infrastructure are created equal. As shown in the diagram below, we categorize data sources into three distinct types to determine the most efficient ingestion method.
 
-![mtx.svg](Readme/mtx.svg)
+![mtx.svg](docs/Images/mtx.svg)
 
 ### **A. Systems Supporting Elastic Agents (The Direct Method) 💻**
 
@@ -408,7 +408,7 @@ For proprietary or "unknown" systems where no pre-built integration exists, we r
 
 ---
 
-# Module 4 : Hands on lab
+# Module 4 : 💫🔆Hands on lab🔆💫
 
 In this section, you will find comprehensive, step-by-step guides to practicing with the Elastic Stack across different architectures. This project currently features two primary versions:
 
@@ -418,6 +418,6 @@ In this section, you will find comprehensive, step-by-step guides to practicing 
 
 Each guide is frequently updated with new data sources and advanced integrations. For deep dives into specific features, I have also included links to the **official Elastic documentation**.
 
-[Elastic Stack Lab version 1 ](Readme/Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)%202e2d315fc81280a18975ca2c60dc548b.md)
+[Elastic Stack Lab version 1 ](docs/labs/Version-1/Elastic%20Stack%20Lab%20version%201.md)
 
-[Elasctic stack Lab version 2 (cluster)](Readme/Elasctic%20stack%20Lab%20version%202%20(cluster)%202d8d315fc812804b8a79edc1e53230d5.md)
+[Elasctic stack Lab version 2 (cluster)](docs/labs/Version-2/Elasctic%20stack%20Lab%20version%202%20(cluster).md)

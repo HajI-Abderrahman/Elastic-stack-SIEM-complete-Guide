@@ -79,7 +79,7 @@ The diagram below illustrates the flow of data from our sources to the centraliz
 
 ---
 
-![My Elastic Stack SIEM ](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/DG1.svg)
+![My Elastic Stack SIEM ](images/DG1.svg)
 
 My Elastic Stack SIEM 
 
@@ -579,7 +579,7 @@ by  taping in the browser this url→ `http://192.168.12.10:5601`
 > after you get into the kibana interface you will see a wornning notification pup up. you will fixe it by set a public address for kibana in the yml file
 > 
 > 
-> ![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image.png)
+> ![image.png](images/image.png)
 > 
 > ```yaml
 > server.publicBaseUrl: "http://192.168.12.10:5601"
@@ -590,7 +590,7 @@ by  taping in the browser this url→ `http://192.168.12.10:5601`
 
 - you find as mentioned on the home page divided into 3 principal sections: analytics, observability, security, and the management section, where we will manage the fleet and do other things.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%201.png)
+![image.png](docs/Imagesimage%201.png)
 
 # 3️⃣ Fleet Server & Logstash
 
@@ -606,7 +606,7 @@ The installation of the **Fleet Server** is straightforward and fully guided thr
 
 First, navigate to the **Fleet** section in Kibana and click on **Add Fleet Server**.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%202.png)
+![image.png](images/image%202.png)
 
 You will be prompted to provide:
 
@@ -616,7 +616,7 @@ You will be prompted to provide:
     - the server IP address.
     - the configured listening port `8220`
     
-    ![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%203.png)
+    ![image.png](images/image%203.png)
     
 
 Once this information is validated, Kibana automatically generates a set of commands to be executed on the target machine that will host the Fleet Server.
@@ -625,7 +625,7 @@ It is important to select the command corresponding to the **operating system** 
 
 In our architecture, the Fleet Server is deployed on a **dedicated and isolated Ubuntu machine**, ensuring better stability and security, on next versions we will install it with logstash on the same VM as it the best practice for a centrilzed listenning placement ( for example in case of new system source inagration added or the other since if an integration do not respond to your needs and you wants to come back into the custom way with logstash pipline, instead of change the syslog destination on all the system source you can handl it  only from kibana interface becauseit’s will still send the logs to the same machin so you will need to define only in this machine will listenning to is logs fleet or logstash  ).
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%204.png)
+![image.png](images/image%204.png)
 
 - After successfully executing the commands, a ✅ symbol appears in the Kibana interface, confirming that communication between the Fleet Server and the Elastic Stack has been successfully established.
 
@@ -639,7 +639,7 @@ Then, create a new **agent policy** and assign it a meaningful name.
 
 Keep the first option (in section 2) enabled to allow **agent enrollment via the Fleet Server**, which provides centralized management and automatic updates.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%205.png)
+![image.png](images/image%205.png)
 
 Next, select the target operating system.
 
@@ -652,7 +652,7 @@ In our case, the agent is installed on a **Windows Server** so we will chose win
 .\elastic-agent.exe install --url=https://192.168.12.12:8220 --enrollment-token=RUViY25ab0JHQ1dMOUJJZTdQLUw6VGI3YlplLTBiR29KRUhWOVBqMG5Ldw== --insecure
 ```
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%206.png)
+![image.png](images/image%206.png)
 
 As with the Fleet Server installation, a visual confirmation ✅ appears when the agent installation is successful.
 
@@ -663,11 +663,11 @@ In our case, since the **WD Server is powered off in that moment**, the agent ap
 > Notifications may also indicate the availability of **policy updates**. These updates must be applied from the Fleet interface and will then be automatically deployed by the Fleet Server.
 > 
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%207.png)
+![image.png](images/image%207.png)
 
 Fleet Servers and agents can be monitored in more detail using **prebuilt dashboards**, which provide a global overview of their status and performance.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%208.png)
+![image.png](images/image%208.png)
 
 **Note:**
 
@@ -676,7 +676,7 @@ Additional dashboards are available in the **Dashboards** section, including:
 - **Analytics**: a wide collection of generic dashboards
 - **Security**: dashboards focused on security monitoring and detection
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%209.png)
+![image.png](images/image%209.png)
 
 In addition to existing dashboards, **custom dashboards** can be created using the dedicated button in the top-left corner of the interface.
 
@@ -688,7 +688,7 @@ This approach is particularly useful for:
 
 It requires a solid understanding of log structure in order to build meaningful visualizations.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2010.png)
+![image.png](images/image%2010.png)
 
 ---
 
@@ -706,13 +706,13 @@ An integration can be added from two different locations within Kibana.
 Click on **Add integration**, search for the desired integration, and select it.
 or you can go to te sepicicfic agentpolicy that you want and you find a button for adding integration your need.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2011.png)
+![image.png](images/image%2011.png)
 
 In our case, we search for example **Windows** integration.
 
 As shown, the integration is already associated with an agent policy. A notification also indicates that an update is available and must be applied from the Fleet interface.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2012.png)
+![image.png](images/image%2012.png)
 
 > After clicking **Add Windows**, you must define:
 > 
@@ -740,7 +740,7 @@ host.os.name: "Windows Server 2019 Standard Evaluation"
 
 Displays logs generated by systems running this operating system.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2013.png)
+![image.png](images/image%2013.png)
 
 > **Note:** Logs are structured as fields and values, which greatly facilitates search and correlation.
 > 
@@ -757,7 +757,7 @@ In such cases, a specific configuration is required.
 
 First, add the **FortiGate integration** to the Fleet Server policy.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2014.png)
+![image.png](images/image%2014.png)
 
 The Fleet Server then acts as a **Syslog listener**, configured on port `9004` with the all address by puting `0.0.0.0` in case of if you have only one equipement on the same port you can add his ip address for minimise the logs gathered.
 
@@ -793,7 +793,7 @@ It is also possible that logs are correctly indexed but not visible in Kibana du
 
 The dashboards provided by the integration offer a global overview.
 
-![Capture d'écran 2026-01-07 230544.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/Capture_dcran_2026-01-07_230544.png)
+![Capture d'écran 2026-01-07 230544.png](images/Capture_dcran_2026-01-07_230544.png)
 
 In our case, they display authentication failures, without advanced detection rules at this stage.
 
@@ -949,7 +949,7 @@ Detection rules are configured in:
 Security → Detection rules (SIEM)
 ```
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2015.png)
+![image.png](images/image%2015.png)
 
 Elastic provides multiple methods for defining rules:
 
@@ -979,11 +979,11 @@ For this project, three detection rules were used:
 
 To test the detection logic, a **brute-force attack** was simulated using the **Hydra** tool.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2016.png)
+![image.png](images/image%2016.png)
 
 The resulting alerts confirmed that log ingestion, parsing, correlation, and alerting were functioning as expected.
 
-![image.png](Elastic%20Stack%20Lab%20version%201%20(2%20most%20organized)/image%2017.png)
+![image.png](images/image%2017.png)
 
 ---
 
