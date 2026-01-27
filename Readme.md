@@ -99,7 +99,7 @@ To get the most out of this guide, I recommend following the modules in order:
 
 but first befor going on the thearical detialed thachnical explaniation of the  SIEM let’s see dimo of what we are going to build 
 
-![image.png](docs/Images/image.png)
+![image.pn](docs/Images/Demo_video.gif)
 
 ---
 
