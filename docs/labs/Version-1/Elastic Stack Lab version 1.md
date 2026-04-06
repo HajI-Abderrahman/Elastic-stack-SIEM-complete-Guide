@@ -558,9 +558,9 @@ by  taping in the browser this url→ `http://192.168.12.10:5601`
     Then    
     
     ```bash
-    /usr/share/elasticsearch/bin
+    cd /usr/share/elasticsearch/bin
     # the run this command
-    sudo ./elasticsearch-create-enrollment-token -- scope kibana
+    sudo ./elasticsearch-create-enrollment-token --scope kibana
     # its will output for you an token that you will use it for enrollement.
     ```
     
